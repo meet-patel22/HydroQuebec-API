@@ -1,0 +1,350 @@
+{
+	"info": {
+		"_postman_id": "1f9b76d2-7ca4-4b15-894c-005f25531b7d",
+		"name": "HydroQAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10572286"
+	},
+	"item": [
+		{
+			"name": "emloyee",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"firstName\": \"Meet\",\r\n  \"lastName\": \"Patel\",\r\n  \"phoneNumber\": \"514 234 5456\",\r\n  \"emergencyContactNumber\": \"MP / 123987456\",\r\n  \"email\": \"meet@patel.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/employee/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"employee",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"firstName\": \"Jeel\",\r\n  \"lastName\": \"Patel\",\r\n  \"phoneNumber\": \"514 514 0000\",\r\n  \"emergencyContactNumber\": \"JP / 767273723823\",\r\n  \"email\": \"jeel@patidar.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/employee/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"employee",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "read",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/employee/?id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"employee",
+								""
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "read All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/employee/getAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"employee",
+								"getAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/employee/?id=6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"employee",
+								""
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "6"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Meet N\",\r\n    \"lastName\": \"Patel\",\r\n    \"phoneNumber\": \"514 234 5456\",\r\n    \"emergencyContactNumber\": \"MP / 123987456\",\r\n    \"email\": \"meet@patel.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/employee/?id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"employee",
+								""
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PowerOutage",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"employees\": [\r\n    {\r\n    \"id\": 1,\r\n    \"firstName\": \"Meet\",\r\n    \"lastName\": \"Patel\",\r\n    \"phoneNumber\": \"514 234 5456\",\r\n    \"emergencyContactNumber\": \"MP / 123987456\",\r\n    \"email\": \"meet@patel.com\"\r\n    },\r\n    {\r\n    \"id\": 2,\r\n    \"firstName\": \"Jeel\",\r\n    \"lastName\": \"Patel\",\r\n    \"phoneNumber\": \"514 514 0000\",\r\n    \"emergencyContactNumber\": \"JP / 767273723823\",\r\n    \"email\": \"jeel@patidar.com\"\r\n    }\r\n  ],\r\n  \"startDate\": \"10/11\",\r\n  \"startTime\": \"12:00\",\r\n  \"updatedDate\": \"10/11\",\r\n  \"updatedTime\": \"12:40\",\r\n  \"address\": \"H5L023\",\r\n  \"status\": \"In Progress\",\r\n  \"description\": \"Customer X: NotWorking – the client heard a strong noise.\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/powerOutage/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"powerOutage",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"employees\": [\r\n    {\r\n    \"id\": 1,\r\n    \"firstName\": \"Meet\",\r\n    \"lastName\": \"Patel\",\r\n    \"phoneNumber\": \"514 234 5456\",\r\n    \"emergencyContactNumber\": \"MP / 123987456\",\r\n    \"email\": \"meet@patel.com\"\r\n    },\r\n    {\r\n    \"id\": 2,\r\n    \"firstName\": \"Jeel\",\r\n    \"lastName\": \"Patel\",\r\n    \"phoneNumber\": \"514 514 0000\",\r\n    \"emergencyContactNumber\": \"JP / 767273723823\",\r\n    \"email\": \"jeel@patidar.com\"\r\n    }\r\n  ],\r\n  \"startDate\": \"10/11\",\r\n  \"startTime\": \"12:00\",\r\n  \"updatedDate\": \"10/11\",\r\n  \"updatedTime\": \"12:40\",\r\n  \"address\": \"H4L023\",\r\n  \"status\": \"In Progress\",\r\n  \"description\": \"Customer X: NotWorking – the client heard a strong noise.\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/powerOutage/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"powerOutage",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "read",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/powerOutage/?id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"powerOutage",
+								""
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/powerOutage/?id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"powerOutage",
+								""
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"employees\": [\r\n        {\r\n            \"id\": 1,\r\n            \"firstName\": \"Jeel\",\r\n            \"lastName\": \"Patel\",\r\n            \"phoneNumber\": \"514 234 5456\",\r\n            \"emergencyContactNumber\": \"MP / 123987456\",\r\n            \"email\": \"meet@patel.com\"\r\n        },{\r\n    \"id\": 2,\r\n    \"firstName\": \"Meet\",\r\n    \"lastName\": \"Patel\",\r\n    \"phoneNumber\": \"514 234 5456\",\r\n    \"emergencyContactNumber\": \"MP / 123987456\",\r\n    \"email\": \"meet@patel.com\"\r\n}\r\n    ],\r\n    \"startDate\": \"10/11\",\r\n    \"startTime\": \"12:00\",\r\n    \"updatedDate\": \"10/11\",\r\n    \"updatedTime\": \"12:46\",\r\n    \"address\": \"H6L023\",\r\n    \"status\": \"In Progress\",\r\n    \"description\": \"Customer X: NotWorking – the client heard a strong noise.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/powerOutage/?id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"powerOutage",
+								""
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "read All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/powerOutage/getAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"powerOutage",
+								"getAll"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
